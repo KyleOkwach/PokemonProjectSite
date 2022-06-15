@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   // purge: [
@@ -9,7 +11,11 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        gray: colors.trueGray
+      }
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }

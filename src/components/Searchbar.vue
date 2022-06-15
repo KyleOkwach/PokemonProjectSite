@@ -16,12 +16,12 @@ export default{
         >
             <input type="text" v-model="inp.value" 
                 class="rounded-l-xl">
-            <button class="bg-pink-400 hover:bg-purple-700 
-                hover:text-green-300 rounded-r-xl
-                px-1 transition-all duration-300 text-white
+            <button class="bg-gray-600 hover:bg-gray-500 
+                rounded-r-xl px-1 transition-all 
+                duration-300 text-white
             "
             >
-                search
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
 
