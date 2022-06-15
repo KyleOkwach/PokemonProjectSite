@@ -25,7 +25,7 @@ export default{
           flex flex-col p-2 transition-all duration-500
           bg-gradient-to-t from-gray-900 items-center
         ">
-          <h3 class="uppercase mb-1">#{{ i+1 }} {{ pokemon.species.name }}</h3>
+          <h3 class="uppercase mb-1">#{{ pokemon.id }} {{ pokemon.species.name }}</h3>
           <div class="flex gap-1">
             <p>Type: </p>
             <div class="flex">

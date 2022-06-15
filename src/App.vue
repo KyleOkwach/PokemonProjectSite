@@ -21,7 +21,7 @@ import Pokedex from './components/Pokedex.vue';
 import { list } from 'postcss';
 
 var query = 'pichu'
-var limit = 12
+var limit = 151
 var search_result = {}
 var dex = ref([])
 
@@ -48,8 +48,17 @@ const listPokemon = () => {
 
 }
 
+
 listPokemon()
-console.log(dex)
+
+const dex_sorted = ref(computed(() => {
+  return dex.value.sort((a, b) => {
+    return a.id - b.id
+  })
+}))
+
+// console.log(dex)
+// console.log(dex_sorted)
   
 </script>
 
@@ -66,7 +75,7 @@ console.log(dex)
       <h2 class="text-green-500 uppercase text-xl">Pokedex</h2>
     </div>
   
-    <Pokedex :api="dex"/>
+    <Pokedex :api="dex_sorted"/>
   
     <Footer />
 
