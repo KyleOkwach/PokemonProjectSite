@@ -5,10 +5,9 @@
 @layer components {
 
     .nav-link {
-        @apply hover:text-green-200
+        @apply hover:text-blue-700
                 transition-all duration-300
-                p-1 hover:bg-slate-400
-                rounded-md
+                p-1 rounded-md
     }
     .foot-tab {
         @apply flex flex-col items-center 
@@ -18,5 +17,21 @@
         @apply hover:text-gray-500 transition-all 
                 duration-300
     }
+    .range-field {
+        @apply rounded-sm w-16
+    }
+    .dex-button {
+        @apply hover:shadow-md mt-1 
+                hover:text-white rounded-md
+                transition-all duration-300 px-2 hover:px-3 gap-1
+                flex items-center
+    }
+    .dex-button-inactive {
+        @apply hover:shadow-md mt-1 
+                rounded-md transition-all 
+                duration-300 px-2 gap-1
+                flex items-center
+    }
+
 
 }

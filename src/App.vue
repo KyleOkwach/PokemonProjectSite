@@ -1,16 +1,3 @@
-<script>
-export default {
-  name: 'App',
-  components: {
-    Navbar,
-    Searchbar,
-    Footer,
-    Pokedex
-  }
-}
-</script>
-
-
 <script setup>
 
 import { ref, computed } from 'vue'
@@ -21,9 +8,15 @@ import Pokedex from './components/Pokedex.vue';
 import { list } from 'postcss';
 
 var query = 'pichu'
-var limit = 36
+var pokedexRange = {
+  //Range of pokemon to display by ID
+  rangeLower: 1,
+  rangeUppper : 42
+}
 var search_result = {}
 var dex = ref([])
+
+var myDB = ref([])
 
 const searchPokemon = () => {
   const url = `https://pokeapi.co/api/v2/pokemon/${ query }/`
@@ -37,7 +30,7 @@ const searchPokemon = () => {
 // GENERAL_LIST
 const listPokemon = () => {
 
-  for (let i = 1; i <= limit; i++) {
+  for (let i = pokedexRange.rangeLower; i <= pokedexRange.rangeUppper; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${ i }/`
 
     fetch(url)
@@ -56,9 +49,6 @@ const dex_sorted = ref(computed(() => {
     return a.id - b.id
   })
 }))
-
-// console.log(dex)
-// console.log(dex_sorted)
   
 </script>
 
@@ -67,15 +57,14 @@ const dex_sorted = ref(computed(() => {
 
     <Navbar />
   
-    <Searchbar :inp="query"/>
-  
-  
     <!-- RESULTS -->
     <div class="flex justify-center ">
-      <h2 class="text-green-500 uppercase text-xl">Pokedex</h2>
+      <h2 class="text-blue-500 uppercase text-3xl">Pokedex</h2>
     </div>
+
+    <Searchbar :inp="query"/>  
   
-    <Pokedex :api="dex_sorted"/>
+    <Pokedex :api="dex_sorted" :userDB="myDB" />
   
     <Footer />
 

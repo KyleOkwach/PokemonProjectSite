@@ -13,9 +13,8 @@ export default{
     w-[100%]">
         <h1 class="text-2xl">PokeDB</h1>
         <ul class="hidden sm:flex sm:gap-5">
-            <li class="nav-link"><a href="">Search</a></li>
-            <li class="nav-link"><a href="">Pokedex</a></li>
-            <li class="nav-link"><a href="">MyDB</a></li>
+            <li class="nav-link"><a href=""><i class="fa-solid fa-book"></i><i> Pokedex</i></a></li>
+            <li class="nav-link"><a href=""><i class="fa-solid fa-database"></i><i> MyDB</i></a></li>
         </ul>
     </nav>
     <br>
