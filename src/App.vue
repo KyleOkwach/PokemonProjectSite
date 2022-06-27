@@ -21,7 +21,7 @@ import Pokedex from './components/Pokedex.vue';
 import { list } from 'postcss';
 
 var query = 'pichu'
-var limit = 151
+var limit = 36
 var search_result = {}
 var dex = ref([])
 
