@@ -24,16 +24,23 @@ export default{
 </script>
 
 <template>
-    <div
-      class="
-        flex justify-center mt-6 gap-2
-      "
-    >
-      <h3 class="text-white text-xl uppercase">Range</h3>
-      <form class="flex gap-2">
-        <input type="number" placeholder="From" class="range-field"/>
-        <input type="number" placeholder="To" class="range-field"/>
-      </form>
+    <div class="
+          flex justify-center flex-col
+          mt-6 items-center
+        ">
+      <div class="
+          flex justify-center gap-2
+        "
+      >
+        <h3 class="text-white text-xl uppercase">Range</h3>
+        <form class="flex gap-2">
+          <input type="number" placeholder="From" class="range-field"/>
+          <input type="number" placeholder="To" class="range-field"/>
+        </form>
+      </div>
+      <div class="text-green-400 text-sm">
+        <i>*ranges greater than 45 may lead to performance issues</i>
+      </div>
     </div>
 
     <div class="p-10 sm:grid sm:grid-cols-3 

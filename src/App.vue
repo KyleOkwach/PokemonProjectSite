@@ -11,7 +11,7 @@ var query = 'pichu'
 var pokedexRange = {
   //Range of pokemon to display by ID
   rangeLower: 1,
-  rangeUppper : 42
+  rangeUppper : 45
 }
 var search_result = {}
 var dex = ref([])
